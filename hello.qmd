@@ -42,3 +42,20 @@ ggplot(
   ) +
   theme_minimal()
 ```
+
+```{python}
+
+# create a simple plot using Python
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+from palmerpenguins import load_penguins
+penguins = load_penguins()
+sns.scatterplot(data=penguins, x='flipper_length_mm', y='bill_length_mm', hue='species')
+plt.title('Flipper vs Bill Length of Penguins')
+plt.xlabel('Flipper Length (mm)')
+plt.ylabel('Bill Length (mm)')
+plt.show()
+
+
+```
